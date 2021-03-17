@@ -9,8 +9,12 @@ import json
 import plotly.express as px
 
 # spotify stuff
-SPOTIFY_CLIENT_ID = os.environ.get('SPOTIFY_CLIENT_ID')
-SPOTIFY_CLIENT_SECRET = os.environ.get('SPOTIFY_CLIENT_SECRET')
+# SPOTIFY_CLIENT_ID = os.environ.get('SPOTIFY_CLIENT_ID')
+# SPOTIFY_CLIENT_SECRET = os.environ.get('SPOTIFY_CLIENT_SECRET')
+
+SPOTIFY_CLIENT_ID = '16a9d2c946da4347b9491e784a17a2c1'
+SPOTIFY_CLIENT_SECRET = '59579925f9204d188d711ddced47ad71'
+
 
 def get_spotify_token():
   url='https://accounts.spotify.com/api/token'
