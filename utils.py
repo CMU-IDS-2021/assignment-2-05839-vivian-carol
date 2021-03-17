@@ -6,11 +6,16 @@ import sqlite3
 from sqlite3 import Connection
 import requests
 import json
+from boto.s3.connection import S3Connection
 import plotly.express as px
 
 # spotify stuff
-SPOTIFY_CLIENT_ID = os.environ.get('SPOTIFY_CLIENT_ID')
-SPOTIFY_CLIENT_SECRET = os.environ.get('SPOTIFY_CLIENT_SECRET')
+# SPOTIFY_CLIENT_ID = os.environ.get('SPOTIFY_CLIENT_ID')
+# SPOTIFY_CLIENT_SECRET = os.environ.get('SPOTIFY_CLIENT_SECRET')
+
+SPOTIFY_CLIENT_ID = '16a9d2c946da4347b9491e784a17a2c1'
+SPOTIFY_CLIENT_SECRET = '59579925f9204d188d711ddced47ad71'
+
 
 def get_spotify_token():
   url='https://accounts.spotify.com/api/token'
