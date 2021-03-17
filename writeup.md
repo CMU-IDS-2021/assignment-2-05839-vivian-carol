@@ -1,8 +1,6 @@
 # Exploring the musical landscape of David Bowie
 
-![A screenshot of your application. Could be a GIF.](screenshot.png)
-
-TODO: Update screenshot
+![image](https://user-images.githubusercontent.com/24282522/111402007-65713100-8698-11eb-8884-1bedc7fe4038.png)
 
 ## Project Goals
 
@@ -25,17 +23,18 @@ This project was completed by **Vivian Young** and **Carol Ho** for the Interact
 
 A great design decision can help the audience navigate smoothly through large amounts of data. Our design decisions were made with an understanding of the existing mental model of how people understand music trends and with common music search behavior and expectations. The three main decisions are broken down as follows:
 
-#### 1. People relate musical styles with certain decades
+#### 1. Take advantage of familiarity and schemas surrounding music
 It is commonly observed that in the US, people often discuss music preferences and trends within the context of the decade in which the music was produced. We can see an example of this in Wikipedia, where music trends are categorized by year: https://en.wikipedia.org/wiki/Music_history_of_the_United_States. Based on this observation, the x-axis of the scatter chart and the bar chart are order by the release date of the song or album. And furthermore, we included sliders for filtering the data in these charts and in the search feature to allow the user to fine-tune the albums and songs based on trends. Another feature we implemented is that the bar chart calculates the average acoustic feature data of albums produced in a decade to compare with a David Bowie album from that same time period in order to visualize similarities and differences in the musical trends of that decade.
 
-#### 2. The psychological effect ofs color
+#### 2. Utilize color and color psychology
 Based on many findings from the world of social and cognitive psychology, it is known that we commonly have preconceived notions of color associations (an example being red signalling danger or yellow signalling caution). Though these schemas may differ by culture and personal experiences, generally, warmer colors, such as red, orange, yellow, are perceived as positive while cooler colors (e.g. blue, purple, green) are perceived as calmer or appear more unhappy. We observed that this understanding could be useful in visualizing **Valence**. 
 
 > Valence: Describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
 
 Since this definition and term may be new to many in our audience, we aimed to familiarize users by connecting color schemas to the variable of valence. The color on scatter chart shows how the selected features, moods, and valence distribute across the albums, which shows the varied styles of Bowie's work. By clicking on the legend area to focus on a specific valence, the audience can also explore how an individual valence level distributes across albums.
 
-#### 3. Bar chart comparison development
+#### 3. Iterate, iterate, iterate!
+With many data visualization projects, ideas on paper may not translate to the eventual application on one's computer screen. When it came to some of our charts, we experienced many small hiccups when perfecting our visualizations and interactions.
 Initially, we developed a bar chart by pairing the average album and the decade, with one album and one decade in one chart at a time. The comparison was explicit but was ineffective at communicating how these features (danceability, energy, and instrumentalness) developed through time. However, putting them in one chart created a massive amount of information; The chart became crowded with 64 bars of albums and the corresponding decade. And ultimately, it was difficult to discern the music trends from the decade bar lying between album bar. Therefore, we decided to overlay the bar and make the opacity to 50%, which allowed for a better comparizon visualization. We also explored how to label the overlay bar charts without distracting the audience. One idea was to place tooltips on each bar chart but it became impossible to trigger the tooltip when two bars are similarly tall. Our eventual solution was to mark the data of the decade bars with text, and the tooltip would only show when the user hovers over the album bar. 
 
 ## Development

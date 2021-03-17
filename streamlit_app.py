@@ -95,7 +95,7 @@ def main():
     legend=alt.Legend(values=[50,100,150,200])),
     opacity=alt.condition(select_scatter, alt.value(1), alt.value(0.1))
   ).properties(
-    width=900,
+    width=700,
     height=900
   ).add_selection(
     select_scatter
@@ -127,7 +127,7 @@ def main():
       tooltip=['album', 'date', 'avg_feature'],
       color=alt.condition(selector, 'album:O', alt.value('lightgray'), legend=None),
   ).properties(
-    width=850,
+    width=700,
     height=600
   ).add_selection(selector)
 
@@ -141,7 +141,7 @@ def main():
       scale=alt.Scale(zero=False),
       title='(V)Average_'+ option +'_by_Decade')
 	).properties(
-    width=850,
+    width=700,
     height=600
   )#.add_selection(selector)
   
