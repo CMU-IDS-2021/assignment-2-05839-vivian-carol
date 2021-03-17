@@ -1,4 +1,4 @@
-# Project name
+# Exploring the musical landscape of David Bowie
 
 ![A screenshot of your application. Could be a GIF.](screenshot.png)
 
@@ -25,10 +25,10 @@ This project was completed by **Vivian Young** and **Carol Ho** for the Interact
 
 ## Design
 
-A great design decision help guide the audience through the data smoothly. Our design decisions aimed to incorporate the existing mental model of how people understand music trends and their search behavior. Three main decisions listed below:
+A great design decision can help the audience navigate smoothly through large amounts of data. Our design decisions were made with an understanding of the existing mental model of how people understand music trends and with common music search behavior and expectations. The three main decisions are as follows:
 
-#### 1. People relate music style with years/decade
-Speaking of music trend in the United States, people talked about it by decade.( The wikipedia also introduce music trend by year:https://en.wikipedia.org/wiki/Music_history_of_the_United_States) Based on this, the x-axis of the scatter chart and the bar chart are order by issued date. And the bar charts of years in scatter charts and search functions allows the user to look for the albums and songs based on the trend. Lastly, the bar chart recalculate the average by decade to compare the album with the trend of music.
+#### 1. People relate musical styles with certain decades
+It is commonly observed that in the US, people often dicuss music preferences and trends within the context of the decade in which the music was produced. We can see an example of this in Wikipedia, where music trends are categorized by year: https://en.wikipedia.org/wiki/Music_history_of_the_United_States. Based on this observation, the x-axis of the scatter chart and the bar chart are order by the release date of the song or album. And furthermore, we included sliders for filtering the data in these charts and in the search feature to allow the user to fine-tune the albums and songs based on trends. Another feature we implemented is that the bar chart calculates the average acoustic feature data of albums produced in a decade to compare with a David Bowie album from that same time period in order to visualize similarities and differences in the musical trends of that decade.
 
 #### 2. The psychology effect of color
 Based on psychology study, color evoke emotions connection. Though it might different by culture and personal experience, but generally, warm colors, such as red, orange, yellow are perceive as positive, while bool colors such as blue, purple and green are perceive as calm, sad and indifference. This emotional connection suit well with the definition of **Valence**. 
@@ -44,7 +44,10 @@ TODO: **A rationale for your design decisions.** How did you choose your particu
 
 ## Development
 ### development process
-In this three-week project, we collaboratively looked for the ideal dataset in the first week and prioritized our top three data set to look for the research questions. The second week we brought back our research questions and decided to move on with the Spotify data set to explore David Bowie's works. We then shared our research interest in this dataset and developed the charts and functions separately. We spent the last week iterate to allow the users better navigate through the application. Below shows how we collaborate in application development:
+In the first week of this three-weeks-long project, we first independently gathered potential datasets that were of interest and then narrowed our options down to our top three dataset choices. With these three choices then decided, we discussed and wrote down a couple of compelling research questions for each dataset.
+Then in the second week, we decided on utilizing the music dataset as the research questions were of most intrigue and worked on narrowing down our focus. The problem of working with too much all at once was definitely an issue we were actively trying to avoid so our next step was to narrow down our focus to highlighting an individual artist. Due to our mutual familiarity with David Bowie's eccentric and diverse body of work, we decided on visualizing his songs and albums throughout the years. After a brief discussion on potential visualizations and interactions, we then entered a period of independent work in order to create various charts and features separately. Our last week was spent iterating through multiple versions of the final result, fine-tuning interactions and minute details all throughout our application.
+
+The following includes a general overview on how we both contributed during the application development process:
 
 - **Scatter Chart - David Bowie's albums:** data query and charts built by Carol, interaction done by both of us
 - **Bar Chart - David Bowie's albums with average features:** data query, interaction, and charts built by Carol
