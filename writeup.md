@@ -37,8 +37,8 @@ Based on psychology study, color evoke emotions connection. Though it might diff
 
 Since the definition of valence is new for most of the audience, connecting the meaning of color and the variable at valence help reduce cognitive load. The color on scatter chart shows how the selected features, moods and valence distribute across the albums, which shows the variety style of Bowie's work. By clicking on the legend area to focus on a specific valence, the audience can also explore the how individual mood distribute across albums.
 
-#### 3. Bar chart comparison development(WIP)
-Initially we try to develop bar chart by placing the average of album and the decade paired up, with one album and one decade, but the information becomes too much in one chart and the audience would lose focus. 
+#### 3. Bar chart comparison development
+Initially, we develop a bar chart by pairing the average album and the decade, with one album and one decade in one chart at a time. The comparison explicit, but it tells nothing about how these features(the danceability, energy, and instrumentalness) develop through times. However, putting them in one chart creates a massive amount of information: the chart is crowded with 64 bars of albums and corresponding decade. And it's hard to tell the music trend with the decade bar lying between album bar. Therefore, we decided to overlay the bar and make the opacity to 50%, which allows the audience to tell the overlay and exceed area by color. We also explore how to label the overlay bar charts without distracting the audience; we placed tooltips on each bar chart, but it's impossible to trigger the tooltip when two bars are similarly tall. We improved by marking the data of the decade bars with text, and the tooltip shows only when the audience hovers on the album bar. 
 
 TODO: **A rationale for your design decisions.** How did you choose your particular visual encodings and interaction techniques? What alternatives did you consider and how did you arrive at your ultimate choices?
 
