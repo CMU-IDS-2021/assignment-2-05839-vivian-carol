@@ -6,7 +6,6 @@ import sqlite3
 from sqlite3 import Connection
 import requests
 import json
-from boto.s3.connection import S3Connection
 import plotly.express as px
 
 # spotify stuff
