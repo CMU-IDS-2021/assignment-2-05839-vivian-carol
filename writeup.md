@@ -38,9 +38,14 @@ With many data visualization projects, ideas on paper may not translate to the e
 Initially, we developed a bar chart by pairing the average album and the decade, with one album and one decade in one chart at a time. The comparison was explicit but was ineffective at communicating how these features (danceability, energy, and instrumentalness) developed through time. However, putting them in one chart created a massive amount of information; The chart became crowded with 64 bars of albums and the corresponding decade. And ultimately, it was difficult to discern the music trends from the decade bar lying between album bar. Therefore, we decided to overlay the bar and make the opacity to 50%, which allowed for a better comparizon visualization. We also explored how to label the overlay bar charts without distracting the audience. One idea was to place tooltips on each bar chart but it became impossible to trigger the tooltip when two bars are similarly tall. Our eventual solution was to mark the data of the decade bars with text, and the tooltip would only show when the user hovers over the album bar. 
 
 ## Development
-### development process
+### Development process
 In the first week of this three-weeks-long project, we first independently gathered potential datasets that were of interest and then narrowed our options down to our top three dataset choices. With these three choices then decided, we discussed and wrote down a couple of compelling research questions for each dataset.
-Then in the second week, we decided on utilizing the music dataset as the research questions were of most intrigue and worked on narrowing down our focus. The problem of working with too much all at once was definitely an issue we were actively trying to avoid so our next step was to narrow down our focus to highlighting an individual artist. Due to our mutual familiarity with David Bowie's eccentric and diverse body of work, we decided on visualizing his songs and albums throughout the years. After a brief discussion on potential visualizations and interactions, we then entered a period of independent work in order to create various charts and features separately. Our last week was spent iterating through multiple versions of the final result, fine-tuning interactions and minute details all throughout our application.
+
+
+Then in the second week, we decided on utilizing the music dataset as the research questions were of most intrigue and worked on narrowing down our focus. The problem of working with too much all at once was definitely an issue we were actively trying to avoid so our next step was to narrow down our focus to highlighting an individual artist. Due to our mutual familiarity with David Bowie's eccentric and diverse body of work, we decided on visualizing his songs and albums throughout the years. After a brief discussion on potential visualizations and interactions, we then entered a period of independent work in order to create various charts and features separately. 
+
+
+Our last week was spent iterating through multiple versions of the final result, fine-tuning interactions and minute details all throughout our application.
 
 The following includes a general overview on how we both contributed during the application development process:
 
