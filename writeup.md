@@ -4,8 +4,6 @@
 
 TODO: Update screenshot
 
-TODO: Short abstract describing the main goals and how you achieved them.
-
 ## Project Goals
 
 In this project, we aim to visualize and explore the **trends and evolution of acoustic features in David Bowie's work from 1969 to 2018** (posthumous releases included).
@@ -25,22 +23,20 @@ This project was completed by **Vivian Young** and **Carol Ho** for the Interact
 
 ## Design
 
-A great design decision can help the audience navigate smoothly through large amounts of data. Our design decisions were made with an understanding of the existing mental model of how people understand music trends and with common music search behavior and expectations. The three main decisions are as follows:
+A great design decision can help the audience navigate smoothly through large amounts of data. Our design decisions were made with an understanding of the existing mental model of how people understand music trends and with common music search behavior and expectations. The three main decisions are broken down as follows:
 
 #### 1. People relate musical styles with certain decades
-It is commonly observed that in the US, people often dicuss music preferences and trends within the context of the decade in which the music was produced. We can see an example of this in Wikipedia, where music trends are categorized by year: https://en.wikipedia.org/wiki/Music_history_of_the_United_States. Based on this observation, the x-axis of the scatter chart and the bar chart are order by the release date of the song or album. And furthermore, we included sliders for filtering the data in these charts and in the search feature to allow the user to fine-tune the albums and songs based on trends. Another feature we implemented is that the bar chart calculates the average acoustic feature data of albums produced in a decade to compare with a David Bowie album from that same time period in order to visualize similarities and differences in the musical trends of that decade.
+It is commonly observed that in the US, people often discuss music preferences and trends within the context of the decade in which the music was produced. We can see an example of this in Wikipedia, where music trends are categorized by year: https://en.wikipedia.org/wiki/Music_history_of_the_United_States. Based on this observation, the x-axis of the scatter chart and the bar chart are order by the release date of the song or album. And furthermore, we included sliders for filtering the data in these charts and in the search feature to allow the user to fine-tune the albums and songs based on trends. Another feature we implemented is that the bar chart calculates the average acoustic feature data of albums produced in a decade to compare with a David Bowie album from that same time period in order to visualize similarities and differences in the musical trends of that decade.
 
-#### 2. The psychology effect of color
-Based on psychology study, color evoke emotions connection. Though it might different by culture and personal experience, but generally, warm colors, such as red, orange, yellow are perceive as positive, while bool colors such as blue, purple and green are perceive as calm, sad and indifference. This emotional connection suit well with the definition of **Valence**. 
+#### 2. The psychological effect ofs color
+Based on many findings from the world of social and cognitive psychology, it is known that we commonly have preconceived notions of color associations (an example being red signalling danger or yellow signalling caution). Though these schemas may differ by culture and personal experiences, generally, warmer colors, such as red, orange, yellow, are perceived as positive while cooler colors (e.g. blue, purple, green) are perceived as calmer or appear more unhappy. We observed that this understanding could be useful in visualizing **Valence**. 
 
 > Valence: Describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
 
-Since the definition of valence is new for most of the audience, connecting the meaning of color and the variable at valence help reduce cognitive load. The color on scatter chart shows how the selected features, moods and valence distribute across the albums, which shows the variety style of Bowie's work. By clicking on the legend area to focus on a specific valence, the audience can also explore the how individual mood distribute across albums.
+Since this definition and term may be new to many in our audience, we aimed to familiarize users by connecting color schemas to the variable of valence. The color on scatter chart shows how the selected features, moods, and valence distribute across the albums, which shows the varied styles of Bowie's work. By clicking on the legend area to focus on a specific valence, the audience can also explore how an individual valence level distributes across albums.
 
 #### 3. Bar chart comparison development
-Initially, we develop a bar chart by pairing the average album and the decade, with one album and one decade in one chart at a time. The comparison explicit, but it tells nothing about how these features(the danceability, energy, and instrumentalness) develop through times. However, putting them in one chart creates a massive amount of information: the chart is crowded with 64 bars of albums and corresponding decade. And it's hard to tell the music trend with the decade bar lying between album bar. Therefore, we decided to overlay the bar and make the opacity to 50%, which allows the audience to tell the overlay and exceed area by color. We also explore how to label the overlay bar charts without distracting the audience; we placed tooltips on each bar chart, but it's impossible to trigger the tooltip when two bars are similarly tall. We improved by marking the data of the decade bars with text, and the tooltip shows only when the audience hovers on the album bar. 
-
-TODO: **A rationale for your design decisions.** How did you choose your particular visual encodings and interaction techniques? What alternatives did you consider and how did you arrive at your ultimate choices?
+Initially, we developed a bar chart by pairing the average album and the decade, with one album and one decade in one chart at a time. The comparison was explicit but was ineffective at communicating how these features (danceability, energy, and instrumentalness) developed through time. However, putting them in one chart created a massive amount of information; The chart became crowded with 64 bars of albums and the corresponding decade. And ultimately, it was difficult to discern the music trends from the decade bar lying between album bar. Therefore, we decided to overlay the bar and make the opacity to 50%, which allowed for a better comparizon visualization. We also explored how to label the overlay bar charts without distracting the audience. One idea was to place tooltips on each bar chart but it became impossible to trigger the tooltip when two bars are similarly tall. Our eventual solution was to mark the data of the decade bars with text, and the tooltip would only show when the user hovers over the album bar. 
 
 ## Development
 ### development process
@@ -55,10 +51,11 @@ The following includes a general overview on how we both contributed during the 
 
 
 ### What aspect took the most time?
-1. Prepare the data for the charts
-The type of columns in the dataset need extra effort to tidy up. For example, we convert the date(varchar) to date(datetime) format to interact with the chart by year and rounding up all the decimal numbers to make it easier to read. To get the music data by decade, we also spent time transferring the data value, group by and re-calculate the average and join the calculated results with SQL.
-2. Customize the color and interaction of the charts
-Altair and Streamlit API are straightforward and easy to implement. But it took us some time to understand the limitation of customization. For example, the user can only interact with the whole line but not the line chart's data point. After digging into the gallery and documentation, we shift our direction to other charts. Therefore, we spent some time iterated various forms, colors, and interactions before coming up with the current application.
+1. Cleaning / preparing the dataset
+The type of columns in the dataset needed extra effort to tidy up. For example, we converted the date(varchar) to date(datetime) format to interact with the chart by year and we rounded up all the decimal numbers to make it easier to read. To get the music data by decade, we also spent time transferring the data value, group by and re-calculate the average and join the calculated results with SQL.
+
+2. Chart customizations
+Although the Altair and Streamlit API are straightforward and easy to implement/navigate, it took us some time to understand the limitations of customization. For example, the user can only interact with the whole line but not the line chart's data point. After digging into the documentation, we shifted our direction towards other charts. Thus, we spent quite some time iterating through various forms, colors, and interactions before settling on the choices present in the current application.
 
 ## Success Story(WIP)
 
