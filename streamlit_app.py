@@ -149,7 +149,7 @@ def main():
   
   #chart-decade-the numbers
   text_decade = bar_decade.mark_text(align='center', color='white',dy=80).encode(
-    text='avg_feature:N'
+    text='trend_feature:N'
 	)
     
   #checkbox-chart comparison
