@@ -18,6 +18,9 @@ def main():
   # title + intro
   # TODO: format title better
   st.title("Exploring the musical landscape of David Bowie")
+  st.markdown("""
+    <img src="https://user-images.githubusercontent.com/24282522/111404566-fa762900-869c-11eb-8f7e-1d96105edde0.png" id="bowie-img">
+  """,unsafe_allow_html=True)
   st.header("Introduction")
   st.write('In this project, we aim to visualize and explore the trends and evolution of acoustic features in David Bowie\'s work from 1969 to 2018 (posthumous releases included).')
   st.markdown('''We started with a large dataset (containing ~340,000 rows) that comprised of various features of albums and songs from the Billboard Top 200 through the decades. 
