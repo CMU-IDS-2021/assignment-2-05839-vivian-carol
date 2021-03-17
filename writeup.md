@@ -61,6 +61,9 @@ The type of columns in the dataset needed extra effort to tidy up. For example, 
 2. Chart customizations
 Although the Altair and Streamlit API are straightforward and easy to implement/navigate, it took us some time to understand the limitations of customization. For example, the user can only interact with the whole line but not the line chart's data point. After digging into the documentation, we shifted our direction towards other charts. Thus, we spent quite some time iterating through various forms, colors, and interactions before settling on the choices present in the current application.
 
-## Success Story(WIP)
+## Success Story
 
-TODO:  **A success story of your project.** Describe an insight or discovery you gain with your application that relates to the goals of your project.
+This project's goal was to explore various acoustic features of David Bowie's works and to provide a way for people to explore his music based on their preferences and mood. With the scatter chart distribution, we can tell that David Bowie's works are energetic but diverse in mood, instrumentalness, and danceability. This also suggests that his works are suitable for a diverse range of contexts. By comparing his work with those in the same decade, we can also tell that the energy and instrumentalness present in his work are distinct, both within that era and compared to the rest of his work. One discovery from the observing trends in the acoustic features is that associations between features can be difficult to predict and may be unexpected. When reading the definitions of the various features, we assumed that high energy levels might be correlated with high valence levels. But the scatter chart and the searching function suggested that were plenty of datapoints with low valence (sad) and simultaneously, low energy. Some questions we have regarding this realization are: How does Spotify calculate their data for songs? How do they use these features in their recommendations / search algorithms? And lastly, how are these features prioritized in the aforementioned algorithms? 
+
+
+Nevertheless, we believe that this application will encourage users to think about musical features behind a song beyond the obvious and how they can be utilized in our daily streams.
