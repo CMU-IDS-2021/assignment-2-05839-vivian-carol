@@ -8,14 +8,6 @@ import requests
 import json
 import plotly.express as px
 
-# spotify stuff
-# SPOTIFY_CLIENT_ID = os.environ.get('SPOTIFY_CLIENT_ID')
-# SPOTIFY_CLIENT_SECRET = os.environ.get('SPOTIFY_CLIENT_SECRET')
-
-SPOTIFY_CLIENT_ID = '16a9d2c946da4347b9491e784a17a2c1'
-SPOTIFY_CLIENT_SECRET = '59579925f9204d188d711ddced47ad71'
-
-
 def get_spotify_token():
   url='https://accounts.spotify.com/api/token'
   grant_type = 'client_credentials'
@@ -60,11 +52,11 @@ def get_connection(path_to_db):
 
 def get_data(conn: Connection):
   sql_query = """
-  SELECT 
+  SELECT
     song, artist, album, date, energy, valence, danceability, instrumentalness, tempo
-  FROM 
-    acoustic_features 
-  WHERE 
+  FROM
+    acoustic_features
+  WHERE
     artist LIKE '%David Bowie%'
   ORDER BY date DESC
   """
@@ -90,7 +82,7 @@ def display_data(conn: Connection):
   # st.dataframe(get_data(conn))
   if st.checkbox("display raw data"):
     st.dataframe(get_data(conn))
-    
+
 def remove_duplicates(df):
   song_list = []
   new_df = None
